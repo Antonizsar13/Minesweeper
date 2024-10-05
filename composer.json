@@ -1,5 +1,5 @@
 {
-    "name": "anton/minesweeper",
+    "name": "antonizsar13/minesweeper",
     "autoload": {
         "psr-4": {
             "Anton\\Minesweeper\\": "src/"
