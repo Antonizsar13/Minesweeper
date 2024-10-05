@@ -1,5 +1,6 @@
 {
     "name": "antonizsar13/minesweeper",
+    "type": "project",
     "license": "MIT",
 
     "autoload": {
