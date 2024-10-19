@@ -1,16 +1,9 @@
 {
     "name": "antonizsar13/minesweeper",
-    "type": "project",
-    "license": "MIT",
-
     "autoload": {
         "psr-4": {
             "Anton\\Minesweeper\\": "src/"
-        },
-         "files": [
-            "src/Controller.php",
-            "src/View.php"
-        ]
+        }
     },
     "bin": [
         "bin/minesweeper"

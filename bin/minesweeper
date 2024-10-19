@@ -2,6 +2,15 @@
 <?php
 require __DIR__ . '/../vendor/autoload.php';
 
-use Antonzisar13\Minesweeper\Controller;
+use Anton\Minesweeper\Game;
+use Anton\Minesweeper\View;
+use Anton\Minesweeper\Controller;
 
-Controller\startGame();
+$size = isset($argv[1]) ? (int)$argv[1] : 10;
+$mines = isset($argv[2]) ? (int)$argv[2] : 10;
+
+$game = new Game($size, $mines);
+$view = new View();
+$controller = new Controller($game, $view);
+
+$controller->startGame();
