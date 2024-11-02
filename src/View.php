@@ -45,4 +45,25 @@ class View
     {
         \cli\line("Неправильные координаты!");
     }
+
+    public function showGamesList($gameList)
+    {
+        if (empty($gameList)) {
+            \cli\line("Нет сохраненных игр.");
+            return;
+        }
+
+        \cli\line("Список сохраненных игр:");
+        foreach ($gameList as $game) {
+            \cli\line(sprintf(
+                "ID: %d | Дата: %s | Игрок: %s | Размер карты: %d | Мин: %d | Статус: %s",
+                $game['id'],
+                $game['date'],
+                $game['player_name'],
+                $game['size_map'],
+                $game['mines'],
+                $game['game_status']
+            ));
+        }
+    }
 }
